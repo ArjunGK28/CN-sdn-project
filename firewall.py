@@ -23,12 +23,9 @@ import logging
 logging.basicConfig(filename='firewall_blocks.log', level=logging.INFO,
                     format='%(asctime)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 
-# -----------------------------------------------------------------------------
+
 # FIREWALL RULES DEFINITION
-# Data structure defining what traffic to DROP. 
-# You can extend this with more rules as needed.
-# An empty dictionary here blocks nothing.
-# -----------------------------------------------------------------------------
+
 FIREWALL_RULES = [
     # 1. Block by MAC address (Drops ANY traffic from h4 completely)
     {"mac_src": "00:00:00:00:00:04"},
